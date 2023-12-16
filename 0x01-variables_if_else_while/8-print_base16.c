@@ -16,7 +16,7 @@ int main(void)
 
 	x = 48;
 	z = 'a';
-	for (i = 0 ; i < 17 ; i++)
+	for (i = 0 ; i < 16 ; i++)
 	{
 		if (i >= 10)
 		{

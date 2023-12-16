@@ -15,7 +15,10 @@ int main(void)
 	for (i = 0 ; i < 26 ; i++)
 	{
 		if (x == 'q' || x == 'e')
-		continue;
+		{
+			x++
+			continue;
+		}
 		putchar (x);
 		x++;
 		}

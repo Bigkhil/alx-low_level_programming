@@ -21,6 +21,7 @@ int main(void)
 		if (i >= 10)
 		{
 			putchar(z);
+			z++;
 		}
 		else
 		putchar(x);

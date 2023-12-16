@@ -13,10 +13,10 @@ int main(void)
 	int x;
 
 	x = 48;
-	for (i = 0 ; i < 9 ; i++)
+	for (i = 0 ; i < 10 ; i++)
 	{
 		putchar(x);
-		if (i == 8)
+		if (i == 9)
 		{
 			break;
 		}

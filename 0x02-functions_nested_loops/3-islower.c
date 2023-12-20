@@ -3,7 +3,8 @@
 
 /**
  * _islower - checks fpr lowercase alphabets
- *
+ *@c: The character to read
+
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */

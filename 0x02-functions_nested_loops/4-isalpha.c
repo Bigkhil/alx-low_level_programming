@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _islower - checks fpr lowercase alphabets
+ * _isalpha - checks for alphabets
  *@c: The character to read
  *
  * Return: On success 1.

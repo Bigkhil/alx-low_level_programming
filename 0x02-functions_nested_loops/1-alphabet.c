@@ -1,13 +1,19 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * main - check the code
+ * print_alphabet - prints the alphabet in lowercase
  *
- * Return: Always 0.
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+	char x = 'a';
+	int i;
+
+	for (i = 0 ; i < 26 ; i++)
+	{
+		x += i;
+		_putchar(x);
+	}
 }

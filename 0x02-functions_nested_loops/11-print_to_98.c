@@ -8,7 +8,6 @@
  */
 void print_to_98(int n)
 {
-	char x;
 	int i, a, b;
 
 	if (n <= 98)

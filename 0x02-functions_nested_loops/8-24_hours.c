@@ -14,7 +14,7 @@ void jack_bauer(void)
 	int x1, x2, x3, x4;
 
 	x1 = x2 = x3 = x4 = 0;
-	while (x1 != 2 && x2 != 4)
+	while (x1 != 2 || x2 != 4)
 	{
 		a1 = x1 + '0';
 		a2 = x2 + '0';

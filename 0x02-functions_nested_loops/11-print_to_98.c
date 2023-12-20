@@ -8,6 +8,7 @@
  */
 void print_to_98(int n)
 {
+	char x, y;
 	int i, a, b;
 
 	if (n <= 98)
@@ -16,9 +17,11 @@ void print_to_98(int n)
 		{
 			a = i % 10;
 			b = i / 10;
+			x = a + '0';
+			y = b + '0';
 			if (n < 10)
 			{
-				_putchar(a);
+				_putchar(x);
 				if (i != 98)
 				{
 					_putchar(',');
@@ -27,8 +30,8 @@ void print_to_98(int n)
 			}
 			else
 			{
-				_putchar(b);
-				_putchar(a);
+				_putchar(y);
+				_putchar(x);
 				if (i != 98)
 				{
 					_putchar(',');
@@ -43,9 +46,11 @@ void print_to_98(int n)
 		{
 			a = i % 10;
 			b = i / 10;
+			x = a + '0';
+			y = b + '0';
 			if (n < 10)
 			{
-				_putchar(a);
+				_putchar(x);
 				if (i != 98)
 				{
 					_putchar(',');
@@ -54,8 +59,8 @@ void print_to_98(int n)
 			}
 			else
 			{
-				_putchar(b);
-				_putchar(a);
+				_putchar(y);
+				_putchar(x);
 				if (i != 98)
 				{
 					_putchar(',');

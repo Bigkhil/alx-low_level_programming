@@ -21,15 +21,12 @@ void more_numbers(void)
 
 			if (j > 9)
 			{
-				c = '0' + j - 10;
+				c = '0' + (j - 10);
 
 				_putchar(x);
 			}
 			_putchar(c);
 		}
-		if (i < 9)
-		{
-			_putchar('\n');
-		}
+		_putchar('\n');
 	}
 }

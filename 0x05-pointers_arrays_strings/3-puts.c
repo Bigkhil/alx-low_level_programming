@@ -1,25 +1,17 @@
 #include "main.h"
 
 /**
- * print_rev - update the value of variable to 98
+ * _puts - update the value of variable to 98
  *
- * @s: pointer to variable
+ * @str: pointer to variable
  * Return: void
  */
-void print_rev(char *s)
+void _puts(char *str)
 {
-	char *sx;
-	int x;
-
-	x = _strlen(s);
-	sx = s;
-	sx += x;
-	sx--;
-	while (sx != s)
+	while (*str != '\0')
 	{
-		_putchar(*sx);
-		sx--;
+		_putchar(*str);
+		str++;
 	}
-	_putchar(*sx);
 	_putchar('\n');
 }

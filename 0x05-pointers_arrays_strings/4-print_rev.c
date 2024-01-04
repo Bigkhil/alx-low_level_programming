@@ -8,18 +8,15 @@
  */
 void print_rev(char *s)
 {
-	char *sx;
-	int x;
+	int x, i;
 
 	x = _strlen(s);
-	sx = s;
-	sx += x;
-	sx--;
-	while (sx != s)
+	s += x;
+	s--;
+	for (i = x ; i > 0 ; i--)
 	{
-		_putchar(*sx);
-		sx--;
+		_putchar(*s);
+		s--;
 	}
-	_putchar(*sx);
 	_putchar('\n');
 }

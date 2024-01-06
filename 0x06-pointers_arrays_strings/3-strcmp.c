@@ -12,13 +12,15 @@ int _strcmp(char *s1, char *s2)
 	int a, b;
 	int diff;
 
-	while (s1 != '\0' && s2 != '\0' && *s1 == *s2)
+	a = *s1;
+	b = *s2;
+	while (s1 != '\0' && s2 != '\0' && a == b)
 	{
 		s1++;
 		s2++;
+		a = *s1;
+		b = *s2;
 	}
-	a = *s1;
-	b = *s2;
 	diff = a - b;
 	return (diff);
 }

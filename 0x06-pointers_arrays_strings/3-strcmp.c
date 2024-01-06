@@ -5,7 +5,7 @@
  *
  * @s1: pointer to variable
  * @s2: pointer to variable
- * Return: void
+ * Return: int
  */
 int _strcmp(char *s1, char *s2)
 {
@@ -13,7 +13,7 @@ int _strcmp(char *s1, char *s2)
 
 	a = *s1;
 	b = *s2;
-	while (s1 != '\0' && s2 != '\0' && a == b)
+	while (*s1 != '\0' && *s2 != '\0' && a == b)
 	{
 		s1++;
 		s2++;

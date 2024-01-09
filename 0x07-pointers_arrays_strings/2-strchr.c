@@ -1,5 +1,6 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
+
 /**
  * _strchr - update the value of variable to 98
  *
@@ -9,9 +10,6 @@
  */
 char *_strchr(char *s, char c)
 {
-	char *x;
-
-	x = 0;
 	while (*s != '\0')
 	{
 		if (*s == c)
@@ -20,5 +18,9 @@ char *_strchr(char *s, char c)
 		}
 		s++;
 	}
-	return (x);
+	if (*s == c)
+	{
+		return (s);
+	}
+	return (NULL);
 }

@@ -9,8 +9,12 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
+	char *ret;
+
+	ret = accept;
 	while (*s != '\0')
 	{
+		accept = ret;
 		while (*accept != '\0')
 		{
 			if (*s == *accept)
@@ -20,10 +24,6 @@ char *_strpbrk(char *s, char *accept)
 			accept++;
 		}
 		s++;
-	}
-	if (*s == *accept)
-	{
-		return (s);
 	}
 	return (NULL);
 }

@@ -19,7 +19,7 @@ int _sqrt_recursion(int n)
  */
 int getroot(int n, long x)
 {
-	if (x < 0)
+	if (x < 0 || n < 0)
 	{
 		return (-1);
 	}

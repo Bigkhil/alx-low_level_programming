@@ -8,11 +8,13 @@
  */
 int _sqrt_recursion(int n)
 {
+	long z = n / 2;
+
 	if (n == 1)
 	{
 		return (1);
 	}
-	return (getroot(n, n / 2));
+	return (getroot(n, z));
 }
 /**
  * getroot - update the value of variable to 98
@@ -21,7 +23,7 @@ int _sqrt_recursion(int n)
  * @x: pointer to variable
  * Return: int
  */
-int getroot(int n, long int x)
+int getroot(int n, long x)
 {
 	if (x < 0)
 	{

@@ -8,7 +8,7 @@
  */
 int _sqrt_recursion(int n)
 {
-	return (getroot(n, n / 2));
+	return (getroot(n, n));
 }
 /**
  * getroot - update the value of variable to 98

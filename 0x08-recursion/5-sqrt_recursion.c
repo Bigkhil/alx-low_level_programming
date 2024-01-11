@@ -27,5 +27,5 @@ int getroot(int n, int x)
 	{
 		return (x);
 	}
-	getroot(n, x - 1);
+	return (getroot(n, x - 1));
 }

@@ -17,7 +17,7 @@ int _sqrt_recursion(int n)
  * @x: pointer to variable
  * Return: int
  */
-int getroot(int n, int x)
+int getroot(int n, long x)
 {
 	if (x < 0)
 	{

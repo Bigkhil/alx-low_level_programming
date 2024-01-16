@@ -10,7 +10,6 @@
  */
 int main(int argc, char *argv[])
 {
-	(void) argc;
 	int res, i;
 
 	res = 0;

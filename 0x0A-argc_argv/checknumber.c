@@ -1,11 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
 /**
  * checknumber - update the value of variable to 98
  *
  * @x: pointer
- * Return: void
+ * Return: number
  */
 int checknumber(char *x)
 {

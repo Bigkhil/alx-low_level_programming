@@ -9,6 +9,13 @@
  */
 int main(int argc, char *argv[])
 {
-	printf("%s", argv[0]);
+	char *x;
+
+	x = argv[0];
+	while (*x != ' ')
+	{
+		_putchar(*x);
+		x++;
+	}
 	return (0);
 }

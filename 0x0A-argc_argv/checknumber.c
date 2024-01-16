@@ -7,13 +7,16 @@
  */
 int checknumber(char *x)
 {
-	while (*x != ' ' && *x != '\0')
+	char *y;
+
+	y = x;
+	while (*y != ' ' && *y != '\0')
 	{
-		if (*x < 48 || *x > 57)
+		if (*y < 48 || *y > 57)
 		{
 			return (0);
 		}
-		x++;
+		y++;
 	}
 	return (1);
 }

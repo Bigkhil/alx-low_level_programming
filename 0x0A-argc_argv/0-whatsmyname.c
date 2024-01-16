@@ -9,13 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	char *x;
-
-	x = argv[0];
-	while (*x != ' ')
-	{
-		_putchar(*x);
-		x++;
-	}
+	(void) argc;
+	printf("%s", argv[0]);
 	return (0);
 }

@@ -10,10 +10,6 @@ int getsize(char *str)
 	int x;
 
 	x = 1;
-	if (str == NULL)
-	{
-		return (1);
-	}
 	while (*str != '\0')
 	{
 		x++;
@@ -33,6 +29,14 @@ char *str_concat(char *s1, char *s2)
 	char *arr, *temp;
 	int size, i;
 
+	if (s1 == NULL)
+	{
+		*s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		*s2 = "";
+	}
 	size = getsize(s1) - 1 + getsize(s2);
 	arr = malloc(sizeof(char) * size);
 	temp = arr;

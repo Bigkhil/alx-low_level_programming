@@ -12,6 +12,10 @@ char *_strdup(char *str)
 
 	size = 1;
 	temp1 = str;
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	while (*str != '\0')
 	{
 		size++;
@@ -19,7 +23,7 @@ char *_strdup(char *str)
 	}
 	arr = malloc(sizeof(char) * size);
 	temp2 = arr;
-	if (str == NULL || arr == NULL)
+	if (arr == NULL)
 	{
 		return (NULL);
 	}

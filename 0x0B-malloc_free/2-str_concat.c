@@ -12,7 +12,7 @@ int getsize(char *str)
 	x = 1;
 	if (str == NULL)
 	{
-		return (0);
+		return (1);
 	}
 	while (*str != '\0')
 	{

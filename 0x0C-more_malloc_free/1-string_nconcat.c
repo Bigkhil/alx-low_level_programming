@@ -43,9 +43,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	s1 = check(s1);
 	s2 = check(s2);
-	if (n > getsize(s2))
+	if (n >= getsize(s2))
 	{
-		n = getsize(s2);
+		n = getsize(s2) - 1;
 	}
 	size = getsize(s1) + n;
 	str = malloc(sizeof(char) * size);

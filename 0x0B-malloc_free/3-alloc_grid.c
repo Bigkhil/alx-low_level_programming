@@ -1,7 +1,6 @@
 #include "main.h"
 /**
  * alloc_grid - function does some behavior
- *
  * @width: int
  * @height: int
  * Return: int
@@ -27,9 +26,10 @@ int **alloc_grid(int width, int height)
 			return (NULL);
 		}
 	}
-	for (i = 0 ; i < width ; i++)
+	for (i = 0 ; i < height ; i++)
 	{
-		for (j = 0 ; j < height ; j++)
+		free(arr[i]);
+		for (j = 0 ; j < width ; j++)
 		{
 			arr[i][j] = 0;
 		}

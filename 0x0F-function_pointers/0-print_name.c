@@ -10,5 +10,8 @@ void print_name(char *name, void (*f)(char *))
 	char *str;
 
 	str = name;
-	(*f)(str);
+	if (name && f)
+	{
+		(*f)(str);
+	}
 }

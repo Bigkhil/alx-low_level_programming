@@ -44,8 +44,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d;
 
+	if (!name || age < 0 || !owner)
+	{
+		return (NULL);
+	}
 	d = malloc(sizeof(dog_t));
-	if (d == NULL || !name || age < 0 || !owner)
+	if (d == NULL)
 	{
 		free(d);
 		return (NULL);

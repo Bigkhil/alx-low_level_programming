@@ -42,28 +42,28 @@ char *_strcopy(char *dest, char *src)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *d;
+	dog_t *dd;
 
-	d = malloc(sizeof(dog_t));
-	if (d == NULL || !name || age < 0 || !owner)
+	dd = malloc(sizeof(dog_t));
+	if (dd == NULL || !name || age < 0 || !owner)
 	{
 		return (NULL);
 	}
-	d->name = malloc(sizeof(char) * (_strlen(name) + 1));
-	if (d->name == NULL)
+	dd->name = malloc(sizeof(char) * (_strlen(name) + 1));
+	if (dd->name == NULL)
 	{
-		free(d);
+		free(dd);
 		return (NULL);
 	}
-	d->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
-	if (d->owner == NULL)
+	dd->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if (dd->owner == NULL)
 	{
-		free(d->name);
-		free(d);
+		free(dd->name);
+		free(dd);
 		return (NULL);
 	}
-	d->name = _strcopy(d->name, name);
-	d->age = age;
-	d->owner = _strcopy(d->owner, owner);
-	return (d);
+	dd->name = _strcopy(dd->name, name);
+	dd->age = age;
+	dd->owner = _strcopy(dd->owner, owner);
+	return (dd);
 }

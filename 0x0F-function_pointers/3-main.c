@@ -21,8 +21,8 @@ int main(int argc, char *argv[])
 		_putchar('\n');
 		exit(98);
 	}
-	if (*(argv[2]) != '+' &&
-	 *(argv[2]) != '-' && *(argv[2]) != '*' && *(argv[2]) != '/' && *(argv[2]) != '%')
+	if (argv[2][0] != '+' &&
+	 argv[2][0] != '-' && argv[2][0] != '*' && argv[2][0] != '/' && argv[2][0] != '%')
 	{
 		i = 0;
 		while (i < 5)
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 		_putchar('\n');
 		exit(99);
 	}
-	if ((*(argv[2]) == '/' || *(argv[2]) == '%') && (*(argv[3]) == '0'))
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && (argv[3][0] == '0'))
 	{
 		i = 0;
 		while (i < 5)
@@ -44,10 +44,10 @@ int main(int argc, char *argv[])
 		_putchar('\n');
 		exit(100);
 	}
-	x = atoi(argv[1]);
-	y = atoi(argv[3]);
+	x = atoi(argv[1][0]);
+	y = atoi(argv[3][0]);
 	z = get_op_func(argv[2])(x, y);
-	_putchar(z);
+	printf("%d",z);
 	_putchar('\n');
 	return (0);
 }

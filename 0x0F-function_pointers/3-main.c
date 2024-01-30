@@ -21,8 +21,8 @@ int main(int argc, char *argv[])
 		_putchar('\n');
 		exit(98);
 	}
-	if (argv[2] != '+' &&
-	 argv[2] != '-' && argv[2] != '*' && argv[2] != '/' && argv[2] != '%')
+	if (*(argv[2]) != '+' &&
+	 *(argv[2]) != '-' && *(argv[2]) != '*' && *(argv[2]) != '/' && *(argv[2]) != '%')
 	{
 		i = 0;
 		while (i < 5)
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 		_putchar('\n');
 		exit(99);
 	}
-	if ((argv[2] == '/' || argv[2] == '%') && (argv[3] == '0'))
+	if ((*(argv[2]) == '/' || *(argv[2]) == '%') && (*(argv[3]) == '0'))
 	{
 		i = 0;
 		while (i < 5)

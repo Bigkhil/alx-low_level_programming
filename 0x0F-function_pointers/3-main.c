@@ -5,6 +5,7 @@
  * @argv: array of pointer to characters
  * Return: int
  */
+int _putchar(char c);
 int main(int argc, char *argv[])
 {
 	char *error = "Error";

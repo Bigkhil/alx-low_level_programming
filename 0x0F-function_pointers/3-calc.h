@@ -1,8 +1,9 @@
-#ifndef EXAMPLE_H
-#define EXAMPLE_H
+#ifndef calc_H
+#define calc_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 /**
  * struct op - Struct op
  *
@@ -14,6 +15,11 @@ typedef struct op
 	char *op;
 	int (*f)(int a, int b);
 } op_t;
+/**
+ * _putchar - function does some behavior
+ * @c: char
+ * Return: int
+ */
 int _putchar(char c);
 int op_add(int a, int b);
 int op_sub(int a, int b);

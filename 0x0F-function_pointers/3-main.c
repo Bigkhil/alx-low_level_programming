@@ -5,11 +5,10 @@
  * @argv: array of pointer to characters
  * Return: int
  */
-int _putchar(char c);
 int main(int argc, char *argv[])
 {
 	char *error = "Error";
-	int x, y, i;
+	int x, y, i, z;
 
 	if (argc != 4)
 	{
@@ -47,5 +46,8 @@ int main(int argc, char *argv[])
 	}
 	x = atoi(argv[1]);
 	y = atoi(argv[3]);
-	return (get_op_func(argv[2])(x, y));
+	z = get_op_func(argv[2])(x, y);
+	_putchar(z);
+	_putchar('\n');
+	return (0);
 }

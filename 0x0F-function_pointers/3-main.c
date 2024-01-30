@@ -44,8 +44,8 @@ int main(int argc, char *argv[])
 		_putchar('\n');
 		exit(100);
 	}
-	x = atoi(argv[1][0]);
-	y = atoi(argv[3][0]);
+	x = atoi(argv[1]);
+	y = atoi(argv[3]);
 	z = get_op_func(argv[2])(x, y);
 	printf("%d",z);
 	_putchar('\n');

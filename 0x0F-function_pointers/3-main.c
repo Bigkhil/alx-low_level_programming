@@ -7,47 +7,27 @@
  */
 int main(int argc, char *argv[])
 {
-	char *error = "Error";
-	int x, y, i, z;
+	int x, y;
 
 	if (argc != 4)
 	{
-		i = 0;
-		while (i < 5)
-		{
-			_putchar(error[i]);
-			i++;
-		}
-		_putchar('\n');
+		printf("Error\n");
 		exit(98);
 	}
 	if (argv[2][0] != '+' &&
-	 argv[2][0] != '-' && argv[2][0] != '*' && argv[2][0] != '/' && argv[2][0] != '%')
+	 argv[2][0] != '-' &&
+	  argv[2][0] != '*' && argv[2][0] != '/' && argv[2][0] != '%')
 	{
-		i = 0;
-		while (i < 5)
-		{
-			_putchar(error[i]);
-			i++;
-		}
-		_putchar('\n');
+		printf("Error\n");
 		exit(99);
 	}
 	if ((argv[2][0] == '/' || argv[2][0] == '%') && (argv[3][0] == '0'))
 	{
-		i = 0;
-		while (i < 5)
-		{
-			_putchar(error[i]);
-			i++;
-		}
-		_putchar('\n');
+		printf("Error\n");
 		exit(100);
 	}
 	x = atoi(argv[1]);
 	y = atoi(argv[3]);
-	z = get_op_func(argv[2])(x, y);
-	printf("%d",z);
-	_putchar('\n');
+	printf("%d\n", get_op_func(argv[2])(x, y));
 	return (0);
 }

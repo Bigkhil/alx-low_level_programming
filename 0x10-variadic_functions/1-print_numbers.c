@@ -3,7 +3,7 @@
  * print_numbers - function does some behavior
  * @separator: string
  * @n: arguments counter
- * Return: int
+ * Return: void
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {

@@ -1,46 +1,32 @@
 #include "variadic_functions.h"
 /**
- * getlength - function does some behavior
- * @x: string
- * Return: int
- */
-int getlength(const char * const x)
-{
-	int l;
-
-	l = 0;
-	while (x[l] != '\0')
-	{
-		l++;
-	}
-	l++;
-	return (l);
-}
-/**
  * print_all - function does some behavior
  * @format: string
  * Return: void
  */
 void print_all(const char * const format, ...)
 {
-	int i, leng;
+	int i, f;
 	char *str;
 	va_list x;
 
 	va_start(x, format);
-	leng = getlength(format);
 	i = 0;
-	while (i < leng)
+	while (format && format[i] != '\0')
 	{
+		f = 1;
 		switch (format[i])
 		{
 			case ('c'):
 			printf("%c", va_arg(x, int));
+			f = 0;
 			break;
 			case ('i'):
 			printf("%d", va_arg(x, int));
+			f = 0;
 			break;
 			case ('s'):
+			f = 0;
 			str = va_arg(x, char *);
 			if (str == NULL)
 				printf("(nil)");
@@ -48,16 +34,16 @@ void print_all(const char * const format, ...)
 				printf("%s", va_arg(x, char *));
 			break;
 			case ('f'):
+			f = 0;
 			printf("%f", va_arg(x, double));
 			break;
-			default:
-			break;
 		}
-		if (i < (leng - 1))
+		i++;
+		if (f == 0 && format[i] != '\0')
 		{
 			printf(", ");
 		}
-		i++;
 	}
 	printf("\n");
+	va_end(x);
 }

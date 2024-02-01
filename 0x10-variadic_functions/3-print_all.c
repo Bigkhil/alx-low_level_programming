@@ -8,15 +8,12 @@ int getlength(const char * const x)
 {
 	int l;
 
-	l = 1;
-	if (x == NULL)
-	{
-		return (0);
-	}
+	l = 0;
 	while (x[l] != '\0')
 	{
 		l++;
 	}
+	l++;
 	return (l);
 }
 /**

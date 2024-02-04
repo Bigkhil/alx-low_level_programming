@@ -13,7 +13,7 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	}
 	new->next = *head;
-	*head = &new;
+	*head = new;
 	new->str = strdup(str);
-	return (&new);
+	return (new);
 }

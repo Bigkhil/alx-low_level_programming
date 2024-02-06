@@ -2,6 +2,7 @@
 /**
  * get_nodeint_at_index - function to delete head node
  * @head: pointer to pointer
+ * @index: unsigned int
  * Return: int
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
@@ -18,8 +19,5 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	}
 	if (cntr == index)
 		return (curr);
-	else
-	{
-		return (NULL);
-	}
+	return (NULL);
 }

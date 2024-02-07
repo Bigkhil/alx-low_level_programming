@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * insert_nodeint_at_index - function to add node to certain index
+ * delete_nodeint_at_index - function to add node to certain index
  * @head: pointer to pointer
  * @index: index of node
  * Return: int

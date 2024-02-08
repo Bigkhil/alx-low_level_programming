@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * get_bit - function to convert decimal to binary
+ * set_bit - function to convert decimal to binary
  * @n: unsigned long int
  * @index: unsigned int
  * Return: int

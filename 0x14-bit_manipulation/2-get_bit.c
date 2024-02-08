@@ -14,7 +14,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		bits++;
 		x = x >> 1l;
 	}
-	if (index == NULL || n == NULL || index >= bits)
+	if (index >= bits)
 		return (-1);
 	temp = 1l << index;
 	if (temp & n)

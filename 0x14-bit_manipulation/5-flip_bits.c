@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * set_bit - function to convert decimal to binary
+ * flip_bits - function to convert decimal to binary
  * @n: unsigned long int
- * @index: unsigned int
+ * @m: unsigned int
  * Return: int
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)

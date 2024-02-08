@@ -12,7 +12,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	while (x)
 	{
 		bits++;
-		x = x >> 1;
+		x = x >> 1l;
 	}
 	if (index && n && index >= bits)
 		return (-1);

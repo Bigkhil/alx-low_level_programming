@@ -7,12 +7,12 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char buffer[letters];
 	int file;
 	ssize_t bytes;
 
 	if (filename == NULL)
 		return (0);
+	char *buffer = malloc(letters);
 	file = open(filename, O_RDONLY);
 	if (file == -1)
 		return (0);

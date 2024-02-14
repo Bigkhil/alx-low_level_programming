@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * read_textfile - function does something
+ * create_file - function does something
  * @filename: string
  * @text_content: string
  * Return: int
@@ -23,7 +23,7 @@ int create_file(const char *filename, char *text_content)
 	if (file == -1)
 		return (-1);
 	written = write(file, text_content, strlen(text_content));
-	if (written == -1)
+	if (written <= 0)
 		return (-1);
 	close(file);
 	return (1);

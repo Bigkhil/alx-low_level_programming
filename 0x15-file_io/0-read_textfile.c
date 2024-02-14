@@ -19,9 +19,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	bytes = read(file, buffer, letters);
 	if (bytes == -1)
 		return (0);
-	byteswritten = write(stdout, buffer, letters);
+	byteswritten = write(1, buffer, letters);
 	if (byteswritten == -1 || byteswritten != bytes)
 		return (-1);
 	close(file);
-	return (bytes);
+	return (byteswritten);
 }

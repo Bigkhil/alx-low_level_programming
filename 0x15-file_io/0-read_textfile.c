@@ -17,10 +17,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (file == -1)
 		return (0);
 	bytes = read(file, buffer, letters);
-	if (bytes == -1)
+	if (bytes == -1 )
 		return (0);
 	byteswritten = write(STDOUT_FILENO, buffer, letters);
-	if (byteswritten == -1 || byteswritten != bytes)
+	if (byteswritten == -1)
 		return (0);
 	close(file);
 	return (byteswritten);

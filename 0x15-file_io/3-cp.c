@@ -2,7 +2,6 @@
 /**
  * valid - function does something
  * @x: int
- * @files: pointer to array of strings
  * Return: void
  */
 void valid(int x)
@@ -39,6 +38,11 @@ int main(int argc, char *argv[])
 		written = write(file2, buff, bytes_read);
 		if (written == -1)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+	}
+	if (bytes_read == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 	if (close(file1) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file1), exit(100);

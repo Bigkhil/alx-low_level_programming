@@ -9,7 +9,7 @@ void valid(int x, char *files[])
 {
 	if (x != 3)
 	{
-		dprintf(2, "Usage: cp %s %s\n", files[1], files[2]);
+		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 }

@@ -45,15 +45,5 @@ int main(int argc, char **argv)
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	if (close(file1) == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d\n", file1);
-		exit(100);
-	}
-	if (close(file2) == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d\n", file2);
-		exit(100);
-	}
 	return (0);
 }

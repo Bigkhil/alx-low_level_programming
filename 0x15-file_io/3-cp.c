@@ -5,7 +5,7 @@
  * @files: pointer to array of strings
  * Return: void
  */
-void valid(int x, char **files)
+void valid(int x, char *files[])
 {
 	if (x != 3)
 	{
@@ -19,7 +19,7 @@ void valid(int x, char **files)
  *@argv: pointer to array of strings
  * Return: Always 0.
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	mode_t permissions = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	char buff[1024];

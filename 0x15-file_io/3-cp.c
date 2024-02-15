@@ -29,17 +29,19 @@ int main(int argc, char **argv)
 	valid(argc, argv);
 	file1 = open(argv[1], O_RDONLY);
 	file2 = open(argv[2], O_CREAT | O_EXCL | O_WRONLY, permissions);
-	bytes_read = read(file1, buff, 1024);
-	if (file1 == -1 || bytes_read == -1)
+	if (file1 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),exit(98);
+	while ((bytes_read = read(file1, buff, 1024)) > 0)
+	{
+		written = write(file2, buff, strlen(buff));
+		if (written == -1 || file2 == -1)
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+	}
 	if (file2 == -1)
 	{
 		if (errno == EEXIST)
 			file2 = open(argv[2], O_TRUNC | O_WRONLY);
 	}
-	written = write(file2, buff, strlen(buff));
-	if (written == -1 || file2 == -1)
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	if (close(file1) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file1), exit(100);
 	if (close(file2) == -1)

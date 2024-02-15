@@ -5,7 +5,7 @@
  * @files: pointer to array of strings
  * Return: void
  */
-void valid(int x, char *files[])
+void valid(int x)
 {
 	if (x != 3)
 	{
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	int file1, file2, written = 0;
 	ssize_t bytes_read;
 
-	valid(argc, argv);
+	valid(argc);
 	file1 = open(argv[1], O_RDONLY);
 	file2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, permissions);
 	if (file1 == -1)

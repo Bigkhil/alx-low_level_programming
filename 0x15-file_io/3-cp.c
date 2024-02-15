@@ -22,7 +22,7 @@ void valid(int x, char **files)
 int main(int argc, char **argv)
 {
 	mode_t permissions = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
-	char buff[1024];
+	char buff[1023];
 	int file1, file2, written = 0, bytes_read;
 
 	valid(argc, argv);
@@ -33,6 +33,11 @@ int main(int argc, char **argv)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
+	}
+	if (close(file1) == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d\n", file1);
+		exit(100);
 	}
 	if (file2 == -1)
 	{
@@ -48,11 +53,6 @@ int main(int argc, char **argv)
 	if (close(file2) == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d\n", file2);
-		exit(100);
-	}
-	if (close(file1) == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d\n", file1);
 		exit(100);
 	}
 	return (0);

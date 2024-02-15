@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 {
 	mode_t permissions = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	char buff[1024];
-	int file1, file2, written = 0, c1, c2;
+	int file1, file2, written = 0;
 
 	valid(argc, argv);
 	file1 = open(argv[1], O_RDONLY);
@@ -39,23 +39,11 @@ int main(int argc, char **argv)
 		if (errno == EEXIST)
 			file2 = open(argv[2], O_TRUNC | O_WRONLY);
 	}
-	written = write(file2, buff, 1024);
+	written = write(file2, buff, strlen(buff));
 	if (written == -1 || file2 == -1)
 	{
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
-	}
-	c1 = close(file1);
-	if (c1 == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d", file1);
-		exit(100);
-	}
-	c2 = close(file2);
-	if (c2 == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d", file2);
-		exit(100);
 	}
 	return (0);
 }

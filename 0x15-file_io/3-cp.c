@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 	file1 = open(argv[1], O_RDONLY);
 	file2 = open(argv[2], O_CREAT | O_EXCL | O_WRONLY, permissions);
 	if (file1 == -1)
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]),exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
 	while ((bytes_read = read(file1, buff, 1024)) > 0)
 	{
 		written = write(file2, buff, strlen(buff));

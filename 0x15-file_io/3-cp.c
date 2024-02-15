@@ -21,12 +21,13 @@ void valid(int x, char **files)
  */
 int main(int argc, char **argv)
 {
-	char buff[1023];
+	mode_t permissions = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+	char buff[1024];
 	int file1, file2, written = 0, bytes_read;
 
 	valid(argc, argv);
 	file1 = open(argv[1], O_RDONLY);
-	file2 = open(argv[2], O_CREAT | O_EXCL | O_WRONLY | S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	file2 = open(argv[2], O_CREAT | O_EXCL | O_WRONLY, permissions);
 	bytes_read = read(file1, buff, 1024);
 	if (file1 == -1 || bytes_read == -1)
 	{

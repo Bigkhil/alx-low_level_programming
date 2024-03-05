@@ -5,7 +5,7 @@
  * @argv: pointer to array of strings
  * Return: Always 0.
  */
-int main(int argc, char *argv[])
+int main(void)
 {
 	printf("%s\n", __FILE__);
 	return (0);
